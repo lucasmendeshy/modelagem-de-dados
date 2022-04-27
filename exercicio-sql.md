@@ -33,5 +33,5 @@ ALTER TABLE filmes
 
 ADD CONSTRAINT fk_filmes_genero
 
-FOREIGN KEY(genero_id) REFERENCES filmes(id);
+FOREIGN KEY(genero_id) REFERENCES genero(id);
 ```
