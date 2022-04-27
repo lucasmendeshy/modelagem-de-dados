@@ -7,6 +7,11 @@
 ``` sql
 CREATE DATABASE vendas CHARACTER SET utf8mb4;
 ```
+### Acessar/entrar no banco
+
+```sql
+use DATABASE vendas;
+```
 
 ### Criar a tabela fabricantes
 
