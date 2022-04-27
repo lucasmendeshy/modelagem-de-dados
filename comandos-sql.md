@@ -39,7 +39,7 @@ CREATE TABLE produtos(
     nome VARCHAR(45) NOT NULL,
     descricao TEXT(1000) NOT NULL,
     preco DECIMAL(6,2) NOT NULL,
-    fabricantes_id INT NOT NULL
+    fabricante_id INT NOT NULL
 );
 ```
 
@@ -52,7 +52,7 @@ ALTER TABLE produtos
     ADD CONSTRAINT fk_produtos_fabricantes
 
 # A Chave estrangeira deve fazer referência à chave primária
-    FOREIGN KEY(fabricantes_id) REFERENCES fabricantes(id);
+    FOREIGN KEY(fabricante_id) REFERENCES fabricantes(id);
 
 ```
 
