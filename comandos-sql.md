@@ -38,7 +38,6 @@ CREATE TABLE produtos(
 );
 ```
 
-
 ### Criação da chave estrangeira (relacionamento entre as tabelas)
 
 
