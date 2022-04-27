@@ -55,3 +55,9 @@ ALTER TABLE produtos
     FOREIGN KEY(fabricante_id) REFERENCES fabricantes(id);
 
 ```
+
+### Adicionar campo/coluna em uma tabela
+
+``` sql
+ALTER TABLE produtos ADD fabricantes_id INT NOT NULL AFTER preco;
+```
