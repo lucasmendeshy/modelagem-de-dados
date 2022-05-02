@@ -73,7 +73,7 @@ INSERT INTO produtos(nome,descricao,preco,quantidade,fabricante_id) VALUES (
 
 
 
-## INSERT
+## INSERT - EXERCICIO
 
 ### Fabricantes
 ``` SQL
@@ -101,3 +101,13 @@ INSERT INTO produtos(nome,descricao,preco,quantidade,fabricante_id) VALUES (
     7
 );
 ```
+
+## SELECT
+
+### Ler dados da tabele produtos
+
+``` SQL
+SELECT * FROM produtos;
+```
+
+
