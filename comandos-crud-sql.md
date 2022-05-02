@@ -108,6 +108,23 @@ INSERT INTO produtos(nome,descricao,preco,quantidade,fabricante_id) VALUES (
 
 ``` SQL
 SELECT * FROM produtos;
+SELECT nome, preco FROM produtos;
+SELECT preco, nome FROM produtos WHERE preco < 5000;
+SELECT nome, descricao FROM produtos WHERE fabricante_id = 3; -- Apple
+```
+
+
+### Operadores Lógicos: E OU NÃO
+
+
+``` SQL
+SELECT * FROM produtos WHERE preco >= 5000 AND preco < 8000;
+
+SELECT nome, preco  FROM produtos WHERE fabricante_id = 3 OR fabricante_id = 8;
+
+SELECT nome, preco, quantidade FROM produtos WHERE fabricante_id = 1 OR fabricante_id = 5 OR fabricante_id = 6 or fabricante_id = 7 OR fabricante_id = 8; -- VERSÃO 3
+-- WHERE NOT fabricante_id = 3; - VERSÃO 1 USANDO NOT
+-- WHERE NOT fabricante_id != 3;  VERSÃO 2 - USANDO OPERADOR !=
 ```
 
 
