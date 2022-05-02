@@ -125,6 +125,7 @@ SELECT nome, preco  FROM produtos WHERE fabricante_id = 3 OR fabricante_id = 8;
 SELECT nome, preco, quantidade FROM produtos WHERE fabricante_id = 1 OR fabricante_id = 5 OR fabricante_id = 6 or fabricante_id = 7 OR fabricante_id = 8; -- VERSÃO 3
 -- WHERE NOT fabricante_id = 3; - VERSÃO 1 USANDO NOT
 -- WHERE NOT fabricante_id != 3;  VERSÃO 2 - USANDO OPERADOR !=
+-- WHERE fabricante_id IN (3, 8); - USANDO FUNÇÃO IN (lista)
 ```
 
 
