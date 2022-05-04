@@ -189,3 +189,25 @@ GROUP BY fabricante_id;
  
 ```
 
+
+## Update
+
+### Atualizar dados de uma tabela
+
+``` SQL
+UPDATE fabricantes SET nome = 'Microsoft Brasil'
+WHERE id = 8;
+
+-- Mudar o preço do Ultrabook da positivo para 5200.
+
+UPDATE produtos SET preco = 5200
+WHERE id = 7;
+
+-- Mudar a quantidade dos produtos da Asus e da Apple para 15.
+UPDATE produtos SET quantidade = 15
+WHERE fabricante_id= 1 or fabricante_id = 3;
+```
+
+
+
+
