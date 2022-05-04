@@ -152,12 +152,40 @@ SELECT SUM(quantidade) AS "Quantidade em estoque"
 FROM produtos WHERE fabricante_id = 3; -- Apple
 
 -- AVG (AVERAGE) MÉDIA
-SELECT AVG (preco) AS "Média dos preços" -- Apelido
+SELECT AVG(preco) AS "Média dos preços" -- Apelido
 FROM produtos; 
 
 -- ROUND (Arredondamento)
 SELECT ROUND( AVG (preco),2 ) AS "Média dos preços"
 FROM produtos; 
+
+-- COUNT (Contagem)
+SELECT COUNT(id) AS "Quantidade de produtos"
+FROM produtos;
+
+-- DISTINCT é um comando para evitar a duplicidade na contagem de campos que nao são chave-primária
+SELECT COUNT(DISTINCT fabricante_id) AS "Quantidade de fabricante"
+FROM produtos;
+
+
+SELECT nome, preco,quantidade, (preco * quantidade) AS Total
+ FROM produtos;
 ```
 
+ 
+``` SQL 
+-- INSERINDO NOVOS FABRICANTES
+
+-- INSERT INTO `produtos` (`id`, `nome`, `descricao`, `preco`, `quantidade`, `fabricante_id`) VALUES (NULL, 'Teclado Gamer', 'Teclado de última geração com teclas quânticas e mecânicas ótimo tempo de resposta e bla bla bla. Ah! E led embutido!', '380', '8', '8'), (NULL, 'Placa-mãe', 'Placa com diversos slots de memória RAM DDR6, suporte a processadores Intel linha Core I5 e i7.', '1200', '5', '1')
+```
+
+
+### Agrupamentos
+
+``` SQL
+SELECT fabricante_id, SUM(preco) AS Total FROM produtos
+GROUP BY fabricante_id;
+--GROUP BY permite segmentar resultados da consulta. Neste caso, somamos todos os preços e segmentamos/agrupamos por cada fabricante.
+ 
+```
 
