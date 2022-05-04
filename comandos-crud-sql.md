@@ -216,6 +216,6 @@ WHERE fabricante_id= 1 or fabricante_id = 3;
 DELETE FROM fabricantes WHERE id = 4; 
 
 DELETE FROM produtos
-WHERE preco <=200 AND preco > 500;
+WHERE preco <= 2000 AND preco > 500;
 ```
 
