@@ -209,5 +209,13 @@ WHERE fabricante_id= 1 or fabricante_id = 3;
 ```
 
 
+### Excluir dados de uma tabela
 
+``` SQL
+-- LG
+DELETE FROM fabricantes WHERE id = 4; 
+
+DELETE FROM produtos
+WHERE preco <=200 AND preco > 500;
+```
 
