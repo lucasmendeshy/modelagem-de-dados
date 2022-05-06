@@ -220,6 +220,55 @@ WHERE preco <= 2000 AND preco > 500;
 ```
 
 
+### Consulta de dados de duas ou mais tabelas (JUNÇÃO)
+
+```SQL
+-- nomeDaTabela.nomeDaColuna
+SELECT produtos.nome,  fabricantes.nome
+
+-- INNER JOIN é o comando que permite juntar tabelas para uma consulta.
+FROM produtos INNER JOIN fabricantes
+
+-- ON comando para indicar o critério da junção
+ON produtos.fabricante_id = fabricante.id;
+
+-- Nome do Produto e do Fabricante, ordenados pelo nome do produto
+
+SELECT
+  produtos.nome AS Produtos,
+  fabricantes.nome AS Fabricante
+
+FROM produtos INNER JOIN fabricantes
+ON produtos.fabricante_id = fabricantes.id 
+ORDER BY produtos.nome, fabricantes.nome;
+
+-- Fabricante, soma dos preços e quantidade dos produtos    
+
+SELECT 
+fabricantes.nome AS Fabricante,
+SUM(produtos.preco) AS Total,
+COUNT(produtos.fabricante_id) AS "Qtd de produtos"
+FROM produtos INNER JOIN fabricantes
+ON produtos.fabricante_id = fabricantes.id
+GROUP BY Fabricante
+ORDER BY Total;
+
+-- Trazer a quantidade de produtos de cada fabricante
+
+SELECT 
+     fabricantes.nome AS Fabricante,
+    COUNT(produtos.fabricante_id) AS Quantidade
+
+    FROM produtos INNER JOIN fabricantes ON produtos.fabricante_id = fabricantes.id
+    GROUP BY Fabricante;
+
+   
+
+```
+
+
+
+
 
 
 
