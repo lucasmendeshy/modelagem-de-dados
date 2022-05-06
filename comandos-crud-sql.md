@@ -272,7 +272,6 @@ SELECT
 
     FROM produtos RIGHT JOIN fabricantes ON produtos.fabricante_id = fabricantes.id
     GROUP BY Fabricante;
-   
 
 ```
 
