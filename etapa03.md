@@ -34,7 +34,20 @@
 
  -- Exercício 8
 
- SELECT alunos.nome, cursos.titulo, professores.atuacao FROM alunos INNER JOIN cursos,professores ON alunos.curso_id.professor_id ORDER BY alunos.nome;
+ SELECT alunos.nome, cursos.titulo, professores.atuacao FROM alunos INNER JOIN cursos ON alunos.curso_id = cursos.id INNER JOIN professores ON professores.curso_id = cursos.id;
+
+ -- Exercício 9
+
+ SELECT COUNT(alunos.curso_id) AS "Quantidade", cursos.titulo AS Cursos FROM alunos INNER JOIN cursos ON alunos.curso_id = cursos.id GROUP BY cursos.titulo ORDER BY COUNT(alunos.curso_id) DESC;
+
+ -- Exercício 10 
+
+ SELECT alunos.nome AS Nome, alunos. 
+
+
+
+
+
 
 
 
